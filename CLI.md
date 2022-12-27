@@ -34,7 +34,7 @@ ex. command.com, cmd...
 
 -cd : 폴더 이동
     
-    cd ``..`` : 상위 폴더
+    cd .. : 상위 폴더
     cd . : 현재 폴더
 
 - touch 파일명 : 파일 생성
