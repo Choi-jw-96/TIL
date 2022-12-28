@@ -18,6 +18,13 @@ Git(분산버진원격관리)을 한 정보를 공유하는 저장소
     Git remote add origin URL
 
     Git아 원격저장소를 추가해줘 오리진을 URL에
+ 
+ - 기타 코드
+ 
+    Git remote -v : 원격저장소 정보 확인
+    Git remote rm origin : 원격저장소 삭제
+
+###
 
 
 ## ★관리코드
@@ -45,6 +52,7 @@ Git(분산버진원격관리)을 한 정보를 공유하는 저장소
     Clone 후 별도의 Git init은 필요없다.
     바탕화면 Git bash에서
     Git clone URL
+
 
 
 
