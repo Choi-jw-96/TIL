@@ -10,7 +10,7 @@ touch & mkdir
 rm & rm -r
 ```
 ## Git
-[git[(GIT.md)
+[git](GIT.md)
 ```
 분산버전관리시스템
 git init
@@ -19,6 +19,7 @@ git commit
 git status & git log
 ```
 ## Github
+[github](Github.md)
 ```
 원격저장소
 git remote add origin URL
