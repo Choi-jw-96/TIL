@@ -10,6 +10,7 @@ touch & mkdir
 rm & rm -r
 ```
 ## Git
+[git[(GIT.md)
 ```
 분산버전관리시스템
 git init
