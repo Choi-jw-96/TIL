@@ -1,6 +1,5 @@
 # 목차 및 중요 내용
-## Markdown 문법
-[마크다운](markdown.md)
+## [Markdown 문법](markdown.md)
 ## CLI
 [씨엘아이 구성요소](CLI.md)
 ```
