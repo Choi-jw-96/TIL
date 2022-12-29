@@ -22,6 +22,7 @@ Git(분산버진원격관리)을 한 정보를 공유하는 저장소
  - 기타 코드
  
     Git remote -v : 원격저장소 정보 확인
+    
     Git remote rm origin : 원격저장소 삭제
 
 ###

@@ -12,12 +12,15 @@ rm & rm -r
 분산버전관리시스템
 git init
 git add
-git commit
+git commit " "
 git status & git log
+git restore / git restore --staged
+git commit --amend -m " "
 ```
 ## [Github](Github.md)
 ```
 원격저장소
+git remote -v
 git remote add origin URL
 git push origin master
 git pull origin master
