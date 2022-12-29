@@ -90,4 +90,7 @@
 * .git의 폴더를 건들이지 않는다면 해당 폴더(ex. TIL)의 이름을 바꿔도 된다.
     But, git이 이미 있는 폴더에 넣으면 안된다.
 
+* git restore --staged 파일명 : staging agra →  working
+* git commit --amend -m "수정명" " : 최근의 커밋메세지를 변경한다.
+    but 해시값이 변되어 push하여 혼동의 우려가 있으면 해선 안된다.
 
