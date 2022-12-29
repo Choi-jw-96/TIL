@@ -2,6 +2,7 @@
 ## Markdown 문법
 [마크다운](markdown.md)
 ## CLI
+[CLI](씨엘아이 구성요소)
 ```
 ls
 cd
