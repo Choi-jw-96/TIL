@@ -1,15 +1,13 @@
 # 목차 및 중요 내용
 ## [Markdown 문법](markdown.md)
-## CLI
-[씨엘아이 구성요소](CLI.md)
+## [CLI](CLI.md)
 ```
 ls
 cd
 touch & mkdir
 rm & rm -r
 ```
-## Git
-[git](GIT.md)
+## [Git](GIT.md)
 ```
 분산버전관리시스템
 git init
@@ -17,8 +15,7 @@ git add
 git commit
 git status & git log
 ```
-## Github
-[github](Github.md)
+## [Github](Github.md)
 ```
 원격저장소
 git remote add origin URL
