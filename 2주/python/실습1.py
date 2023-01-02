@@ -81,16 +81,22 @@ print(a)
 
 b = int(input("두 번째 숫자를 입력해 주세요 > "))
 
-print(a + b)
+f = int(a + b)
+
+print(f)
 
 c = int(input("세 번째 숫자를 입력해 주세요 > "))
 
-print(a + b + c)
+g = int(f + c)
+
+print(g)
 
 d = int(input("네 번째 숫자를 입력해 주세요 > "))
 
-print(a + b + c + d)
+h = int(g + d)
+
+print(h)
 
 e = int(input("다섯 번째 숫자를 입력해 주세요 > "))
 
-print(a + b + c + d + e)
+print(h + e)
