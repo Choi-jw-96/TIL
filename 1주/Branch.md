@@ -30,6 +30,30 @@ Branch 변경 후 작업을 Commit해도 원래 Branch에게는 log가 보이지
 ### git merge 브랜치명
 * 브랜치들을 병합한다
 
+## Merge 3가지 상황
+1. fest-forward
+
+![fest-forward](forward_.png)
+```
+master branch는 변겅사항이 없는경우
+```
+
+### merge commit
+![merge](merge_commit.png)
+```
+서로 다른 파일을 따로 commit한 것을 병합하여 새로운 commit!이 만들어지는 상황
+
+★ 자동으로 commit 발생
+```
+
+### merge commit conflict
+![conf](merge_commit_conf.png)
+```
+동일한 파일의 같은 부분을 따로 commit한 것을 병합하여 나타나는 상황.
+자동으로 merging 못하고 메세지가 뜸
+★ 직접 수정하고 직접 commit 해야함.
+```
+
 
 ## Github Flow 기본원칙
 1. master branch는 **배포가능한 상태**일 것!
@@ -54,4 +78,4 @@ Branch 변경 후 작업을 Commit해도 원래 Branch에게는 log가 보이지
 ---
 
 ## 추가사항
-* git log --oneline -graph : 변화를 그래프로 보여준다
+* git log --oneline --graph : 변화를 그래프로 보여준다
