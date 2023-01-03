@@ -19,6 +19,8 @@ c = str(int(2023) - b + 1)
 # print(f'저의 이름은 {a}이고, 올해 나이는 {c}세 입니다.')
 # f를 사용하면 + 연산자 업이 숫자를 따로 분류해준다 
 
+# print({}는 {}살이다. format(a, c))
+
 
 print("저의 이름은 " + a + "이고, 올해 나이는 " + c + "세 입니다." )
 
@@ -100,3 +102,16 @@ print(h)
 e = int(input("다섯 번째 숫자를 입력해 주세요 > "))
 
 print(h + e)
+
+
+# r = 0
+# r += int(input("첫 번째 숫자를 입력해 주세요 > "))
+# print(r)
+# r += int(input("두 번째 숫자를 입력해 주세요 > "))
+# print(r)
+# r += int(input("세 번째 숫자를 입력해 주세요 > "))
+# print(r)
+# r += int(input("넷 번째 숫자를 입력해 주세요 > "))
+# print(r)
+# r += int(input("다섯 번째 숫자를 입력해 주세요 > "))
+# print(r)
