@@ -42,4 +42,18 @@
 - 반복제어
     break : 조건 후 종료
     continue : 조건 해당사항은 넘기고 순회 후 종료
+```
+
+[pythontutor](https://pythontutor.com/)
+
+---
+## [함수](%ED%95%A8%EC%88%98.md)
+
+```
+len(s)
+sum(iterable, strart =0)
+max(iterable)
+min(iterable)
+map(int, input().split)
+```
 

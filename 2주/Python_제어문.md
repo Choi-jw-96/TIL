@@ -35,6 +35,14 @@ else :
 1. while문
 - 종료 ``조건에 해당``하는 코드르르 통해 종료
 ```
+n = 10
+t = 0
+a = 0
+while n >= a:
+    t += a
+    a += 1
+    print(t, a)
+print(t)
 
 ```
 
@@ -44,6 +52,15 @@ else :
 - 별도의 종료조건 필요 없음
 
 ```
+t = 0
+a = int(input())
+
+
+for A in range(1, a + 1):
+    t += A
+print(t)
+
+
 for num in range(4) :
    print(num**2)
 0
@@ -77,6 +94,29 @@ for char in word:
       print('1')
 1
 ```
+```
+while for 차이
+- while
+n = 10
+t = 0
+a = 0
+
+while n >= a:
+    t += a
+    a += 1
+    print(t, a)
+print(t)
+
+- for
+t = 0
+a = int(input())
+
+
+for A in range(1, a + 1):
+    t += A
+print(t)
+```
+
 
 
 3. 반복 제어
@@ -129,5 +169,9 @@ for char in word:
 ---
 참고
 [pythontutor](https://pythontutor.com/)
+
+
 [실습2](python/%EC%8B%A4%EC%8A%B52.py)
+
+
 [예제2](python/%EC%98%88%EC%A0%9C2.py)
