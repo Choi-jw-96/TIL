@@ -13,6 +13,7 @@
     // : 몫
     % : 나머지
     < : 미만
+
 시퀀스형
 - str
     \n : 줄 바꿈
@@ -23,6 +24,9 @@
     시퀀스형 연산자의 시작은 `0부터` 음수는 뒤에서 `-1부터`
 -range
     range(0,5,2)[::-1] == [4. 2, 0]
+
+컬렉션형
+- dictionary(딕셔너리) : 유일한 값 모음
 ```
 ---
 
@@ -56,4 +60,21 @@ max(iterable)
 min(iterable)
 map(int, input().split)
 ```
+## [컬랙션](collections.md)
+```
+ Dictionary (딕셔너리)
+    key : value가 쌍으로 이뤄진 모음
+    반복문은 key를 활용하여 반복 => 같은 key는 카운팅된다
+    
+Module(모듈)
+    특정 기능을 하는 `코드를  파일`로 작성한것
+    - random
+    - datetim
+    - os
+library(라이브러리)
+    다양한 `패키지를` 하나의 `묶음
+    - random.sample(popultion, k)
+```
+
+## [에러 / 통과](Error_ms.md)
 
