@@ -94,6 +94,20 @@ for name in dict:
     print(name, dict[name])
 
 
+a = input()
+d = {}
+
+for A in a:
+    c = 0
+    for N in a:
+        if A == N:
+            c += 1
+        d[A] = c
+for D in d:
+    print(D, d[D])
+
+
+
 
 #실패코드
 # a = input()

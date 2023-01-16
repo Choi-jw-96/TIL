@@ -63,8 +63,8 @@ print(n)
 
 # 7
 number_list = [1, 2, 3, 4, 5]
-n = number_list[0]
-for M in number_list:
-    if M <= n:
-        n = M
+n = number_list[0]                      # n = list안에서 정한다(list 중 젤 작은 수이니까)
+for M in number_list:                   # list를 쪼개줘
+    if M <= n:                          # M이 n보다 작거나 같다면    
+        n = M                           # M을 n에 넣어줘!! (==가 아니다 주의)
 print(n)

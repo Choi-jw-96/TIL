@@ -77,4 +77,13 @@ library(라이브러리)
 ```
 
 ## [에러 / 통과](Error_ms.md)
+```
+EOL
+EOF
+invalid syntax
+assign to literaㅣ
+try... except...
+```
 
+## [입출력](input_output.md)
+Json
