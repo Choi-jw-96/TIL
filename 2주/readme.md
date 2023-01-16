@@ -5,6 +5,7 @@
 ![vo](variable_object.png)
 `= : 객체를 변수에 할당할 때 사용`
 - 객체의 종류
+![object](Object.png)
 ```
 숫자형
 - int
