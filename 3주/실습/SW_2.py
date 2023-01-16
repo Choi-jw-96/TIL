@@ -37,16 +37,6 @@ print("+++#+")
 print("++++#")
 
 
-
-
-#5. 2058
-a = input()     # int는 for 안됨
-t = 0
-for A in a:
-    t += int(A)
-print(t)
-
-
 """
 성준님
 for i in range(5) :
@@ -57,6 +47,19 @@ for i in range(5) :
             print('+', end='')
     print()
 """
+
+
+
+
+#5. 2058
+a = input()     # int는 for 안됨
+t = 0
+for A in a:
+    t += int(A)
+print(t)
+
+
+
 
 
 #6. 2019

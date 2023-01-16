@@ -33,11 +33,12 @@ class person:
      def __init__(self, name):
         self.name = name
      def greeting(self):     # 호출 시 self가 먼저 출력
-        retutn f'안녕 난{self.name}'
+         return f'안녕 난{self.name}'
 p1 = person('아이유')   # init메서드 호출
 print(p1.greeting())    # 직접 greeting을 호출
 # == print(person.greeting(p1))
-     def __del__(self)
+    #  def __del__(self): self 소멸
+
 
 
 
@@ -52,16 +53,19 @@ class person:
     
     def __gt__(self, other):    # 나이가 많은사람이 더 커
         # ge == (p1 > p2)    
-        return self.age > other.age
+        if self.age > other.age:
+            return self
+        else:
+            return other
+    def __str__(self):
+        return f'{self.name}({self.age})'
 
 
 p1 = person('재용', 30, 'istp')
 p2 = person('유영', 28, 'enfj')
 print(p1.name)
 print(p1.greeting)
-print(p1 > p2)  # Fase
+print(p1 > p2)  # 재용(30)
 print(p1)   # 데이터 조각이 나옴
-
-    def __str__(self):
-        return f'{self.name}({self.age})'
 print(p1)   # 재용(30)
+print(len(p1))  # 30

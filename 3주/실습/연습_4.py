@@ -1,11 +1,19 @@
+num = 2
+result = "홀" if num % 2 == 1 else "짝"
+print(result)   # 짝
 
-
+num = 5
+if num >= 0:
+    value = num
+else:
+    value = 0
+print(value)
 
 
 
 
 members = ['홍엽', '세정']
-for i, member in enumerate(members):
+for i, member in enumerate(members):    # 0, '홍엽'
     print(i, member)
 
 
@@ -23,7 +31,7 @@ number = ['1', '2', '3']
 # 숫자로 바꾸고 싶다면
 n_numbers = list(map(int, number))      # map 형변환
 
-number = [2, 1], [3. 1]
+number = [2, 1], [3, 1]
 # 정렬 싶다면? [1, 2], [1, 3]
 print(list(map(sorted, number)))
 

@@ -36,3 +36,4 @@ for list in my_list:
     #     dict[my_list] = 1
     dict[my_list] = dict.get(list, 0) + 1
 print(dict)
+
