@@ -105,3 +105,23 @@ for N in range(Q):
     else:
         sco = 0                 # 오답이면 누적 점수를 리셋 시켜
 print(sum(sco_list))
+
+
+
+#whil 경우
+q = int(input())
+nums = list(map(int, input().split()))
+sco = 0
+tal = 0
+i = 0
+while i < q:
+
+    if nums[i] == 1:
+        sco += 1                # 점수를 누적 시켜
+        tal += sco 
+
+    else:
+        sco = 0
+        
+    i += 1  
+print(tal)
