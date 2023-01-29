@@ -12,4 +12,27 @@ Big-O(빅오표기법)
 `변경가능`(연속적이이 않음) => 삽입 삭제 편리
 num = [추출 값 for 이름 in range(n)]
 ```
+## [문자열](string.md)
+```
+`변경 불가능`한 자료형
+ 문자열 슬라이스
+
+|a|b|c|d|e|f|g|h|i|
+|-|-|-|-|-|-|-|-|-|
+|0|1|2|3|4|5|6|7|8|
+|-9|-8|-7|-6|-5|-4|-3|-2|-1|
+```
+
+## [딕셔너리](dictionary.md)
+```
+ 해시테이블
+dict[key] = value  
+dict.pop(key,default)
+dict[key] 
+dict.get(key, default)
+
+.keys()
+.values()
+.items()
+```
 

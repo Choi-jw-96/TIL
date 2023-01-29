@@ -25,7 +25,7 @@
 |문법|설명|
 |-|-|
 |s.replace(old,new(,count))|특정글자를 변경 (해당 개수만큼 실행)|
-|s.strip()|공백, 특정문자 제거|
+|s.strip()|양쪽 끝의 공백, 특정문자 제거|
 |s.split()|공백, 특정문자 기준 분리|
 |''.join([iterable])|iterable끼리 합침|
 |s.capitalize()|첫 글자를 대문자로 변경|

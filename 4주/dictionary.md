@@ -37,7 +37,7 @@ value 목록에 담긴 dict_value를 반환
 #### .items()
 key, value를 쌍으루 반환
 
-
+```
 count[member] = count.get(memer, 0) + 1
 ==
 count_items = count.items()
