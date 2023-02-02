@@ -14,7 +14,7 @@
 - `.pop`을 활용하여 `삭제`
 - 반복문은 `key를 활용하여 반복` => 같은 key가 ``카운팅`` 된다 (실습4의 6반)
 
-```
+```python
 #키 - 이름, 값 - 전화번호
 phone_book = {
     "피자헛" : "1588-5588",
@@ -64,7 +64,7 @@ for name in phone_book:    # name은 변수의 이름
 |.mkdir(path))|path라는 폴더를 만듦|
 |.chdir(path))|path를 변경|
 
-```
+```python
 import os
 print(os.listdir())
 ```
@@ -78,12 +78,12 @@ print(os.listdir())
 >import 와 from...import를 사용
 
 
-```
+```python
 import random    # 모듈을 가져옴
 menu = ["밥", "빵", "면"]
 print(random.choice(menu))
 ```
-```
+```python
 import random
 s = range(1, 46)
 a = random.sample(s, 6)
@@ -100,7 +100,7 @@ print(students)
 a = random.shuffle(students)
 print(a)
 ```
-```
+```python
 import datetime
 print(datetime.datetime.now())    # 시간까지
 
@@ -121,7 +121,7 @@ print(end - d)
 return : None > 원본을 바꾼다
 해당 리스트 차례를 정렬 
 
-sorte() : 함수
+sorted() : 함수
 정렬된 리스트
 
 ---

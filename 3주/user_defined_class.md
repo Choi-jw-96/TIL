@@ -21,20 +21,22 @@ python은 모든 객체로 이뤄져 있다.
 2. attribute : 어떤 데이터를 가지는가?
 3. method : 어떤 함수를 할 수 있는가?
 
-> class ...:    
+```python
+ class ...:    
     def__init__(self,...):   
         self....=..
-
+```
 
 ### Class 
 class를 가지고 instance(객체)를 생성한다
 class에서의 내부정의는 모든 instance가 같은 속성을 지니게 함
 
 리스트 : [1, 2, 3], ["1"]
-> class person: pass      
+```python
+class person: pass      
     print (type(person()))  
     # main.person → 객체의 타입은 person
-
+```
 ```
 - @classmethod..(cls) : class를 활용/조작
 - ..(self) : instance를 활용/조작
@@ -69,12 +71,14 @@ isubclass(class, classinfo)
 instance = 객체
 
 - instance 변수 : 각각의 instance의 attribute
-> class person:    
+```python
+class person:    
     def __init__(self, name):   
         self.name = name    # instance의 변수 정의  
 john = person("john")   
 print(john.name)    # instance 변수 접근    
 john.name = "Johm Kim" # instance 변수 할당
+```
 
 - instance method 
 ```   
@@ -96,7 +100,7 @@ __init__
 
 - 매직 method
 특수 동장을 위해 만들어진 메소드 
-> `__str__(self)` : 객체 출력을 지정    
+`__str__(self)` : 객체 출력을 지정    
 `__gt__(self)` : 부등호 연산자
 ---
 [연습](실습/%EC%97%B0%EC%8A%B5_2.py)

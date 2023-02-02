@@ -37,11 +37,12 @@
 → 삽입 삭제 수정 조회 연산 속도가 리스트 보다 빠르다
 접근과 찾는건 느리다
 
->import heapq   
+```python
+import heapq   
 heapq.heapify() : 정렬  
 heapq.heappop(list[]) : 삭제    
 heapq.heappush(list, item)
-
+```
 
 
 최소값을 찾기엔 편해도 사이에 일정 숫자를 넣으려면 시간복잡도가 김

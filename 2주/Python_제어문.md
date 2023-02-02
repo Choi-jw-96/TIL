@@ -10,7 +10,7 @@ if ``:``
 elif ``:``
 
 else``:``
-```
+```python
 d = 80
 if d > 150 :
    print("매우나쁨")
@@ -34,7 +34,7 @@ else :
 ### 종류
 1. while문
 - 종료 ``조건에 해당``하는 코드르르 통해 종료
-```
+```python
 n = 10
 t = 0
 a = 0
@@ -51,7 +51,7 @@ print(t)
 - ``모든 객체를 순회`` 후 종료
 - 별도의 종료조건 필요 없음
 
-```
+```python
 t = 0
 a = int(input())
 
@@ -94,7 +94,7 @@ for char in word:
       print('1')
 1
 ```
-```
+```python
 while for 차이
 - while
 n = 10
@@ -125,7 +125,7 @@ print(t)
 - break
 
 반복문 종료
-```
+```python
 word = 'apple'
 for char in word:
     print('char')
@@ -153,7 +153,7 @@ for char in word:
 - continue
 
 해당 코드블록은 수행하지 않고, 다음 반복 수행
-```
+```python
 word = "banana"
 for char in word:
    # print('char')

@@ -3,19 +3,22 @@
 ## 활용
 
 ### 입력
+```python
 f = open(file, mode = 'r')
 print(f.read())
     mode
     'r' =  읽기 전용
     'w' = 쓰기권한
-text = f.readlin()
+text = f.readline()
 f.close()
-
+```
 
 ### with
+```python
 open("hello.txt, 'r', encdoing='UTF8') as f:
     print(type(f))
     txt = f.reading()
+```
 
 ## Json
 웹 어플리케이션에서 데이터를 전송할 때 사용
@@ -23,19 +26,19 @@ open("hello.txt, 'r', encdoing='UTF8') as f:
 
 ### 활용
 - 객체(list, dictionary) → json :
-```
+```python
 import json
 x = []
 json.dumps(x)   # []
 ```
 - json → 객체(list, dictionary)
-```
+```python
 x = json.load(f)
 ```
 ## pprint
 데이터 구조를 이쁘게 인쇄하는 기능
 
-```
+```python
 import json
 f = open('date/movie.json', 'r', encoding = 'utf8') as f:
     movie = json.load

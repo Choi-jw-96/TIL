@@ -37,16 +37,20 @@ value 목록에 담긴 dict_value를 반환
 #### .items()
 key, value를 쌍으루 반환
 
-```
+```python
 count[member] = count.get(memer, 0) + 1
 ==
 count_items = count.items()
 print(count_items)
-
+```
 ==
+참고
+
+```python
 from collections import Counter
 new_count_items = count(members)
 print(new_count_item)
 
 print(counter('hello apple hi'))       # 각 문자가 몇개 나왔는지
 print(counter('pen pineapple apple pen').most_common())     # P
+```

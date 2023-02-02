@@ -49,10 +49,11 @@ list.pop()으로 활용 가능
 
 ### deque
 양방향으로 입출력
->from collections import deque  
+```python
+from collections import deque  
 appendleft(), poplieft()    
 append(), pop()
-
+```
 큐보다 삽입 추출이 빠르다
 
 
