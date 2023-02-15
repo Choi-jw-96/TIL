@@ -17,8 +17,46 @@
 
 
 ### DFS 동작 과정
+# 1260
+```python
+def dfs(grap, v, visit):
+
+    visit[v] = True
+    print(v)
+
+    for i in sorted(grap[v]):
+        if not visit[i]:
+            dfs(graph, i, visited)
+
+N, M ,V = map(int, input().split())
+
+graph = [[] for _ in range(N+1)]
+
+for _ in range(M):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+
+
+
+visited = [False] * (N + 1)
+
+dfs(graph, V, visited)
+```
+
+
+
+
+
+이차원 리스트 구현 연습
+재귀, BFS
+예
+그리디/최단경로/정렬
+
+
 
 ```python
+#이상하다 잘못 알려줬나?
 # 그래프는 인접행렬 or 인접리스트 방식으로 표현
 graph=[[1,2], [0,3,4], [0,4,5], [1], [1,2,6], [2], [4]]
 
@@ -51,10 +89,4 @@ def dfs(start):
 dfs(0)
 
 ```
-
-
-이차원 리스트 구현 연습
-재귀, BFS
-예
-그리디/최단경로/정렬
 

@@ -1,0 +1,47 @@
+CREATE TABLE exmples(
+examID INT AUTO_INCREMENT, 
+lastName VARCHAR(50) NOT NULL, 
+firstName VARCHAR(50) NOT NULL, 
+PRIMARY KEY (examId)
+);
+
+SHOW COLUMNS FROM exmples;
+
+DROP TABLE exmples;
+
+
+ALTER TABLE
+	exmples
+ADD
+	country VARCHAR(100) NOT NULL;
+
+SHOW COLUMNS FROM exmples;
+
+
+ALTER TABLE
+	exmples
+ADD
+	age INT NOT NULL, 
+ADD
+    address VARCHAR(100) NOT NULL;
+    
+ALTER TABLE exmples
+MODIFY
+	address VARCHAR(50) NOT NULL;
+    
+ALTER TABLE exmples
+MODIFY lastName VARCHAR(10) NOT NULL,
+MODIFY firstName VARCHAR(10) NOT NULL;
+
+
+ALTER TABLE exmples
+CHANGE COLUMN
+	country state VARBINARY(100) NOT NULL;
+    
+ALTER TABLE exmples
+DROP COLUMN address;
+
+ALTER TABLE exmples
+DROP COLUMN state,
+DROP COLUMN age;
+	
