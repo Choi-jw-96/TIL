@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            border: 5px solid darkgrey ;
+            width: 80%;
+            height: 150px;
+            background-color: #abd8be;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div > img {
+            width: 15%;
+            margin-left: 20px;
+        }
+
+        .log{
+            border: 8px solid rgb(85, 114, 113);
+            background-color: white;
+            display: flex;
+            width: 25%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin :10px 20px;
+            /* justify-content: center; */
+        }
+
+        .id {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }        
+        .box {
+            border: 1px rgb(85, 114, 113) solid;
+            flex-grow: 1;
+            line-height: 50px;
+            text-align: center;
+        }
+        .in{
+            background: darkgray;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="logo.webp" alt="">
+        <div class="log">
+            <div class="id">
+             <div class="box">ID</div>
+             <div class="box">Password</div>
+            </div>
+            <a class="in" href="#">Log In</a>
+        </div>
+    </div>
+</body>
+</html>

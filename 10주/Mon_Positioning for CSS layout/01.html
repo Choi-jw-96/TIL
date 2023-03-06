@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 1500px;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .static{
+            position : static;
+            background-color: lightcoral;
+        }
+
+        /* 부모의 위치 기준 + 노멀 플로우를 깸 */
+        .absolute {
+            position: absolute;
+            background-color: lightgreen;
+            /* 오른쪽으로 움직여 */
+            left: 100px;
+        }
+
+        /* 자신의 위치 기준 + 노멀 플로우를 깨지 않음 */
+        .relative {
+            position: relative;
+            background-color: lightblue;
+            /* 우측 아래쪽으로 가 */
+            left: 100px;
+            top : 100px;
+        }
+
+        .fixed {
+            position: fixed;
+            background-color: gray;
+            /* 맨 오른쪽 맨 위에 영역이 없다 → 우측 상단 */
+            top: 0;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!-- alt + shift + ↓ : 복사 -->
+    <!-- alt + ctrl + ↓ : 멀티커서-->
+    <!-- 위치가 다르다면 alt + 위치 클릭 -->
+     <div class="box static">static</div>
+     <div class="box absolute">absolute</div>
+     <div class="box relative">relative</div>
+     <div class="box fixed">fixed</div>
+</div>
+
+</body>
+</html>

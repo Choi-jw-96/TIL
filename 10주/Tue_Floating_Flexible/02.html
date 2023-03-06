@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      height: 500px;
+      border: 1px solid black;
+      /* flex 모드 */
+      display: flex;
+      /* 주 축 설정(열이니 위~아래) */
+      /* flex-direction: column; */
+      /*주 축을 행으로 반대로 설정 (좌~우)(우측으로 붙음) */
+      /* flex-direction: row-reverse;
+      flex-direction: column-reverse; */
+      
+      /* 범위에 벗어나면 어떻게처리 할 것인가? */
+      /* 틀을 유지 */
+      /* flex-wrap: nowrap; */
+      /* 많아지면 아래로도 쌓임 */
+      /* flex-wrap: wrap; */
+
+      /* 주축 정렬(여러행) */
+      /* justify-content: center; */
+      /* 우측 */
+      /* justify-content: flex-end; */
+      /* 좌측 */
+      /* justify-content: flex-start; */
+
+      /* 교차축 정렬(여러 행)*/
+      /* align-content: center; */
+      /* align-content: flex-start; */
+      /* align-content: flex-end; */
+
+      /* 행하나를 움직이는 법 */
+      /* align-items: center; */
+      /* align-items: flex-end; */
+      /* align-items: flex-start; */
+
+    }
+
+    .post {
+      background-color: grey;
+      border: 1px solid black;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .item1 {
+      /* 개별 아이템을 정렬하는 것 */
+      align-self: center;}
+
+    .item2 {
+      /* 개별 아이템(요소)을 정렬하는 것 */
+      align-self: flex-end;}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="post item1">
+      <h2>Post Title 1</h2>
+      <p>Post Content 1</p>
+    </div>
+    <div class="post item2">
+      <h2>Post Title 2</h2>
+      <p>Post Content 2</p>
+    </div>
+    <div class="post">
+      <h2>Post Title 3</h2>
+      <p>Post Content 3</p>
+    </div>
+    <div class="post">
+      <h2>Post Title 4</h2>
+      <p>Post Content 4</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

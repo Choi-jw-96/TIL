@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: flex;
+            flex-direction: column;
+            border: 5px solid darkgray;
+            width: 80%;
+        }
+
+        .bar {
+            border: 3px solid darkgrey ;
+            width: 100%;
+            height: 150px;
+            background-color: #abd8be;
+            display: flex;
+            justify-content: space-between;
+            z-index: -1;
+        }
+
+        div > img {
+            width: 15%;
+            margin-left: 20px;
+        }
+
+        .log{
+            border: 8px solid rgb(85, 114, 113);
+            background-color: white;
+            display: flex;
+            width: 25%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin :10px 20px;
+            /* justify-content: center; */
+        }
+
+        .id {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }        
+        .box {
+            border: 1px rgb(85, 114, 113) solid;
+            flex-grow: 1;
+            line-height: 50px;
+            text-align: center;
+        }
+        .in{
+            background: darkgray;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .articlebox{
+            display: flex;
+            flex-direction: column;
+            border: 5px solid darkgray;
+            
+            justify-content: space-around;
+            background-color: #abd8be;
+            
+        }
+
+        .article{
+            border: solid 1em #abd8be;
+            flex-grow: 1;
+            text-align: justify;
+            margin: 10px 10%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="bar">
+            <img src="logo.webp" alt="">
+            <div class="log">
+                <div class="id">
+                <div class="box">ID</div>
+                <div class="box">Password</div>
+                </div>
+                <a class="in" href="#">Log In</a>
+            </div>
+        </div>
+
+        <div class="articlebox">
+            <div class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, sapien ut consectetur fringilla, enim augue venenatis urna, quis mollis arcu leo fermentum felis. Sed sed orci nec tortor gravida tincidunt. </div>
+            <div class="article">Proin id dictum lacus. Mauris pretium nec augue a elementum. Ut auctor, ipsum et varius fringilla, mi lorem tempor diam, eget pellentesque diam ligula eget lectus. Integer ut mi ex.</div>
+            <div class="article">Phasellus interdum rhoncus risus. Vivamus sit amet tempor purus, in vestibulum augue</div>
+        </div>
+    </div>
+</body>
+</html>

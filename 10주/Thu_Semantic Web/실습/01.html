@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid black;
+            position: relative;
+            display: flex;
+            width: 80%;
+        }
+
+
+        .card__tim{
+            width: 40%;
+        }
+
+        .card__eng{
+            width: 8%;
+            position: absolute;
+            left: 32%;
+        }
+
+        .card__txtbox {
+            display: flex;
+            flex-direction: column;
+            margin: 0% 5%;
+            width: 60%;
+        }
+
+        .card__txtbox-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0%;
+        }
+
+        .card__txtbox-title-h {
+            margin-top: 0%;
+            margin-bottom: 5%;
+        }
+
+        .card__txtbox-title-pro {
+            align-self: flex-end;
+        }
+
+        .card__txt {
+            display: flex;
+            justify-content: space-between;
+            font-size: 3px;
+            margin-bottom: 5%;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="01.jpg" alt="팀 버너스리" class="card__tim">
+        <img src="02.png" alt="영국 국기" class="card__eng">
+        <div class="card__txtbox">
+            <header class="card__txtbox-title">
+                <h4 class="card__txtbox-title-h">팀 버너스리</h4>
+                <h6 class="card__txtbox-title-h card__txtbox-title-pro">프로그래머</h6> 
+            </header>
+            <main>
+                <p class="card__txt">1989년 월드 와일드 웹의 하이퍼텍스트 시스템을 고안하여 개발. 웹의 아버지</p>
+                <p class="card__txt"><span>국적</span><span>영국</span></p>
+                <p class="card__txt"><span>생년월일</span><span>1955년 6월 5일</span></p>
+                <p class="card__txt"><span>직업</span><span span>전산과학자,프로그래머,교수</span></p>
+                <p class="card__txt"><span>출신 대학</span><span>옥스퍼드 대학교 물리 학자</span></p>
+                <p class="card__txt"><span>추가정보</span><a href="https://ko.wikipedia.org/wiki/%ED%8C%80_%EB%B2%84%EB%84%88%EC%8A%A4%EB%A6%AC">https://ko.wikipedia.org/wiki/팀_버너스리</a></p>
+            </main>    
+    </div>
+
+</body>
+</html>
