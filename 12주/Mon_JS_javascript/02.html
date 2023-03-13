@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title heading">선택</h1>
+    <a href="https://www.google">google</a>
+    <div class="text">contnet</div>
+    <div class="text">contnet1</div>
+    <div class="text">contnet2</div>
+
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+    </ul>, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        //  속성 조작
+        //  클래스 속성 조작
+        console.log(document.querySelector("h1"))
+        const h1Tage = document.querySelector("h1")
+        console.log(h1Tage.classList)
+
+        h1Tage.classList.add("test")
+        console.log(h1Tage.classList)
+
+        h1Tage.classList.remove("test")
+        console.log(h1Tage.classList)
+
+        // 일반 속성 저장
+        const aTag = document.querySelector("a")
+        console.log(aTag)
+        console.log(aTag.getAttribute("href"))
+
+        aTag.setAttribute("href", "https://www.naver.com/")
+        console.log(aTag.getAttribute("href"))
+
+        aTag.removeAttribute('href')
+        console.log(aTag.getAttribute("href"))
+
+        // 클레스도 일반 속성 방식으로 조작가능
+        const pTage = document.querySelector(".text")
+        console.log(pTage.getAttribute("class"))
+    </script>
+</body>
+</html>

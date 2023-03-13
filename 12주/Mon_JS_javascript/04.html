@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 1.생성
+        console.log(document.createElement("h1"))
+        const h1Tage = document.createElement("h1")
+        h1Tage.textContent = "제목"
+        console.log(h1Tage)
+
+        // 2.추가
+        //  추가할 위치(부모를 선택)
+        // 돔은 트리 구조이기 때문에 부모를 선택
+        const divTag = document.querySelector("div")
+        divTag.appendChild(h1Tage)
+
+        // 3. 삭제
+
+        divTag.removeChild(h1Tage)
+    </script>
+</body>
+</html>
