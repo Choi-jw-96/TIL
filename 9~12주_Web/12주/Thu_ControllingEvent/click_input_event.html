@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blue {
+      color: lightblue;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1></h1>
+  <button id="btn">클릭</button>
+  <input type="text" id="text-input">
+
+  <script>
+    const bnt = document.querySelector('#btn')
+    const text = document.querySelector('#text-input')
+    const title = document.querySelector('h1')
+
+    text.addEventListener('input', (event) => {
+      title.textContent = event.target.value
+    })
+
+    bnt.addEventListener('click', () => {
+      // title.classList.add('blue')
+      
+      // 1. toggle방법
+      title.classList.toggle('blue')
+
+      // 2. if 방법
+      if (title.classList.value) {
+        title.classList.remove()
+      }
+    })
+    
+  </script>
+
+</body>
+
+</html>

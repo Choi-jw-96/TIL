@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: 'Sophia',
+      greeting: function () {
+        return `hello, ${this.name}`
+      },
+    }
+
+    // 메서드 호출
+    console.log(person.greeting())
+
+    // this
+    // 단순호출
+    const myFunc = function () {
+      return this
+    }
+
+    console.log(myFunc())
+
+
+    // nested 함수에서의 this
+    // 일반함수 : forEach의 인자로 들어간 함수는 일반 함수 호출이기 때문에 this가 전역체계를 가르킴
+    const myObj3 = {
+      numbers: [1, 2, 3],
+
+      myFunc2: function () { 
+        this.numbers.forEach(function (number) { // this = myobj3
+          console.log(number) // 1 2 3
+          console.log(this) // window
+        }) 
+      }
+    }
+    // 화살표 함수 사용 : 자신만의 this값이 없기때문에 외부에서 가져옴
+    const myObj2 = {
+      numbers: [1, 2, 3],
+
+      myFunc2: function () {
+        this.numbers.forEach((number) => { // this = myobj2
+          console.log(number) // 1 2 3
+          console.log(this) // myobj2
+        }) 
+      }
+    }
+
+    console.log(myObj2.myFunc2)
+
+  </script>
+</body>
+</html>

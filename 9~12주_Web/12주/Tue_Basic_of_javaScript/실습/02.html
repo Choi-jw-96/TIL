@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="original" class="container">
+    <div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">이메일</label>
+        <input type="email" class="form-control" id="inputEmail">
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">비밀번호</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary" role="submit">로그인</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="copy" class="container">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+const divCopy = document.querySelector('#copy')
+
+let newDiv = document.createElement('div')
+divCopy.appendChild(newDiv)
+
+let newDiv2 = document.createElement('div')
+newDiv.appendChild(newDiv2)
+newDiv2.classList.add('mb-3')
+
+let newlabel = document.createElement('label')
+newlabel.classList.add('form-label')
+newlabel.textContent = "이메일"
+newlabel.setAttribute("for", "inputEmail")
+let newinput = document.createElement('input')
+newinput.classList.add('form-control')
+newinput.setAttribute("type", "email")
+newinput.setAttribute("id", "inputEmail")
+newDiv2.appendChild(newlabel)
+newDiv2.appendChild(newinput)
+
+let newDiv3 = document.createElement('div')
+newDiv.appendChild(newDiv3)
+newDiv3.classList.add('mb-3')
+
+let newLabel = document.createElement('label')
+newLabel.classList.add('form-label')
+newLabel.textContent = "비밀번호"
+newLabel.setAttribute("for", "inputPassword")
+let newInput = document.createElement('input')
+newInput.classList.add('form-control')
+newInput.setAttribute("type", "password")
+newInput.setAttribute("id", "inputpassword")
+newDiv3.appendChild(newLabel)
+newDiv3.appendChild(newInput)
+
+
+let newDiv4 = document.createElement('div')
+newDiv.appendChild(newDiv4)
+newDiv4.classList.add('mb-3')
+
+let newBnt = document.createElement('button')
+newBnt.classList.add('btn', 'btn-primary')
+newBnt.setAttribute('role', 'submit')
+newBnt.textContent = '로그인'
+newDiv4.appendChild(newBnt)
+</script>
+
+</html>

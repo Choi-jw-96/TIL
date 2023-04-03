@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>로또 추천 번호</h1>
+  <button id="btn">행운 번호 받기</button>
+  <div></div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+  <script>
+    const btn = document.querySelector('#btn')
+    const div = document.querySelector('div')
+
+    btn.addEventListener('click', (event) => {
+    const random = _.range(1, 46)
+    // console.log(random)
+    const lotto = _.sampleSize(random, 6)
+    const ul = document.createElement('ul')
+
+    // console.log(lotto)
+    lotto.forEach((num) => {
+      const li = document.createElement('li')
+      li.textContent = num
+      ul.appendChild(li)
+    })
+    div.appendChild(ul)
+    })
+  </script>
+
+</body>
+
+</html>
