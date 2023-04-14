@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% block content %}
+<h1>welcome</h1>
+<h3>your accountbooks:</h3>
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Order by
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a
+        class="dropdown-item"
+        href="{% url 'accountbooks:filter_by_category' '교통비' %}"
+        >교통비</a
+      >
+    </li>
+    <li>
+      <a
+        class="dropdown-item"
+        href="{% url 'accountbooks:filter_by_category' '식비' %}"
+        >식비</a
+      >
+    </li>
+    <li>
+      <a
+        class="dropdown-item"
+        href="{% url 'accountbooks:filter_by_category' '기타' %}"
+        >기타</a
+      >
+    </li>
+    <li>
+      <a
+        class="dropdown-item"
+        href="{% url 'accountbooks:filter_by_category' '카드값' %}"
+        >카드값</a
+      >
+    </li>
+  </ul>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">note</th>
+      <th scope="col">
+        <a href="{% url 'accountbooks:array' %}">category</a>
+      </th>
+      <th scope="col">amount</th>
+      <th scope="col">detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for accountbook in accountbooks %}
+    <tr>
+      <th scope="row">{{accountbook.pk}}</th>
+      <td>{{ accountbook.note }}</td>
+      <td>{{ accountbook.category }}</td>
+      <td>{{ accountbook.amount }}</td>
+      <td>
+        <a href=" {% url 'accountbooks:detail' accountbook.pk %} "
+          >자세히 보기</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}

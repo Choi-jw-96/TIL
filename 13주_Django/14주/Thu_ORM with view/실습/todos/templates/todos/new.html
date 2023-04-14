@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class="text-center">새 일정 만들기</h1>
+    <div class='border border-dark-subtle border-5 rounded container p-3'>
+      <form action="{% url 'todos:create' %}" method="POST">
+        {% csrf_token %}
+        <div>
+          <label for="title" class="fw-bold">일정 제목</label><br>
+          <input  class="form-control" type="text" name="title" id="title">
+        </div>
+        <div>
+          <label for="content" class="fw-bold">일정 내용</label><br>
+          <textarea  class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <label for="priority" class="fw-bold">우선 순위</label><br>
+          <input  class="form-control" type="number" name="priority" id="priority">
+        </div>
+        <div>
+          <label for="deadline" class="fw-bold">마간 기한</label><br>
+          <input  class="form-control" type="date" name="deadline" id="deadline" value={{todo.deadline|date:"Y-m-d"}}>
+        </div>
+        <div class="text-end my-1">
+          <input class="btn btn-dark " type="submit" name="" id="" value="일정 추가">
+          <button type="button" class="btn btn-dark ">
+            <a class="link-offset-2 link-underline link-underline-opacity-0 link-light" href="{% url 'todos:index' %}">돌아가기</a>
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>

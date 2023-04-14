@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+  .login-size input {
+    padding: 20px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    width: 500px;
+  }
+
+
+</style>    
+{% endblock style %}
+
+{% block content %}
+<h1 class="text-center text-success fw-bold mb-5">Login</h1>
+<div class='d-flex justify-content-center'>
+  <form action="{% url 'accounts:login' %}" method="POST">
+    {% csrf_token %}
+    <div class="login-size">
+      {{ form.as_p }}
+    </div>
+    <input type="submit" value='로그인' class="btn btn-success fw-bold" style="width:100%; padding:20px; font-size: 22px;"> 
+  </form>
+</div>
+
+{% endblock content %}

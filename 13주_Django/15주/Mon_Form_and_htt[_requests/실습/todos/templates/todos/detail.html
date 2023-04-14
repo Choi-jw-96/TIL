@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Detail</h1>
+  <p>글 번호 : {{ todo.pk }} </p>
+  <p>일정 : {{ todo.title }} </p>
+  <p>일정 내용 : {{ todo.content }} </p>
+  <p>우선 순위 : {{ todo.priority }} </p>
+  <p>작성일 : {{ todo.created_at }} </p>
+  <p>마감일 : {{ todo.deadline }} </p>
+  <a href="{% url 'todos:index' %}">[back]</a>
+  <a href="{% url 'todos:update' todo.pk %}">[update]</a>
+  <form action="{% url 'todos:delete' todo.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit"  value="삭제">
+  </form>
+{% endblock content %}
+

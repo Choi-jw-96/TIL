@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>Form 실습</h1>
+  <form action="https://search.naver.com/search.naver" methpd='GET'>
+    <label for="message">검색어 : </label>
+    {% comment %} name[key] = message[value] {% endcomment %}
+    <input type="text" name="query" id='message'>
+    {% comment %} 반드시 submit 버튼이어야 한다. {% endcomment %}
+    <input type="submit">
+  </form>
+{% endblock content %}

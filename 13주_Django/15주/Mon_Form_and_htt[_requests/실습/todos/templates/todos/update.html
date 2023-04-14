@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>UPDATE</h1>
+  <form action="{% url 'todos:update' todo.pk %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="[update]">
+  </form>
+  <a href="{% url 'todos:index' %}">[back]</a>
+{% endblock content %}

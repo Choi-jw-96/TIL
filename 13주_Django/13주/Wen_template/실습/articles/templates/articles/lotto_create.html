@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="/lotto/" method="GET" class="mt-5 ms-5">
+    <input class="border border-primary rounded" type="number" name='message' style="height:38px;"  placeholder = "로또 생성 수" min = 0 id= "num">
+
+    <input type="submit" value="Throw" class="btn btn-outline-primary">
+  </form>
+{% endblock content %}

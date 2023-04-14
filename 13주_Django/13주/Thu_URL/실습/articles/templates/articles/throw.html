@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action=" {% url 'articles:catch' %}" method='GET' class="container">
+  <h1>입력하세요.</h1>
+  <input type="text" name='message' class='border border-primary rounded'>
+  <input type="submit" value="Throw" class="btn btn-outline-primary">
+</form>
+{% endblock content %}
+
+

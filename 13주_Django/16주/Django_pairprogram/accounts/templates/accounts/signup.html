@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+  .signup-size input {
+    padding: 15px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    width: 500px;
+  }
+</style>    
+{% endblock style %}
+
+{% block content %}
+<h1 class="text-center text-success fw-bold mb-5">Signup</h1>
+<div class='d-flex justify-content-center'>
+    <form action="{% url 'accounts:signup' %}" method = "POST">
+        {% csrf_token %}
+        <div class="signup-size">
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value='회원 가입' class="btn btn-success fw-bold  mb-5" style="width:100%; padding:15px; font-size: 22px;"> 
+        </div>
+    </form>
+</div>
+{% endblock content %}

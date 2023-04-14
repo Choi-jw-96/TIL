@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>글 내용</h1>
+  <h4> 제목 : {{review.title}} </h4>
+  <h5> 영화 : {{review.movie}} </h5>
+  {% if review.image %}
+    <img src="{{review.image.url}}" alt="img">
+  {% endif %}
+  <p> {{review.content}} </p>
+  
+  <a href="{% url 'reviews:index' %}">home</a>
+
+  <form action="{% url 'reviews:comment_create' review.pk %}" method="POST">
+    {% csrf_token %}
+    {{comment_form.as_p}}
+    <input type="submit" value="올리기">
+  </form>
+
+  <hr>
+
+  <ul class="list-group">
+    <li class="list-group-item active" aria-current="true">총 댓글 : {{ review.comment_set.count }} </li>
+    {% for comment in comments %}
+      <li class="list-group">
+        {{ comment.content }}
+        <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}">
+          {% csrf_token %}
+          <input type="submit" value="삭제">
+        </form>        
+      </li>
+      <hr>
+    {% endfor %}
+  </ul>
+
+</div> 
+
+{% endblock content %}

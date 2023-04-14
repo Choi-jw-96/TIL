@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+<style>
+    .text{
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-weight: lighter
+    }
+
+    
+</style>
+{% endblock style %}
+
+{% block content %}
+
+<article class='container'>
+    <h3>리뷰 목록</h3>
+    <div class='row'>
+        {% for review in reviews %}
+        <div class='col-6 col-md-4 col-lg-3 col-xxl-2'>
+        <div class="card m-2" style="width: 12rem;">
+                <a href="{% url 'reviews:detail' review.pk%}">
+                    {% if review.image %}
+                    <img  style="width: 190px; height: 200px;" class='mt-2' src=" {{review.image.url}} " alt="movie_img">
+                    {% else %}
+                    <img style="width: 190px; height: 200px;" class='mt-2' src="{% static 'No_img.webp' %}" alt="no_img">
+                    {% endif %}
+                </a>
+                <div class="card-body">
+                <h5 class="card-title text">{{ review.title }}</h5>
+                <p class="card-text m-0 text">영화명 :{{ review.movie }}</p>
+                <p class="card-text m-0 text">작성자 : {{ review.user.username }}</p>
+                <p class="card-text m-0 text">{{ review.content }}</p>        
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock content %}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h1>일정 상세 내역</h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">일정 제목 : {{todo.title}}</h5>
+        <p class="card-text">일정 내용 : {{todo.content}}</p>
+        <hr>
+        <p class="card-text">우선순위 : {{todo2}}</p>
+        <hr>
+        <p class="card-text">마감기한 : {{todo.deadline}}</p>
+        <hr>
+        <p class="card-text">완료여부 : {{todo.completed}}</p>
+        <hr>
+        <a href="{% url 'todos:edit' todo.pk %}" class="btn btn-primary">일정 수정</a>
+        <a href="{% url 'todos:index' %}" class="btn btn-primary">전체 일정 보기</a>
+      </div>
+    </div>
+  
+    <form action="{% url 'todos:delete' todo.pk %}" method=POST>
+      {% csrf_token %}
+      <input type="submit" value="일정 삭제">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>

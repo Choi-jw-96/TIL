@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>게시글 작성</h1>
+<form action="{% url 'reviews:create' %}" method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value='upload'>
+  <a href="{% url 'reviews:index' %}" onclick='func()'>home</a>
+</form>
+
+{% endblock content %}

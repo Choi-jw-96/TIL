@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+  .update-size input {
+    padding: 20px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    width: 500px;
+  }
+
+</style>    
+{% endblock style %}
+
+{% block content %}
+    <h1 class="text-center text-success fw-bold mb-5">Update</h1>
+    <div class='d-flex justify-content-center'>
+        <form action="{% url 'accounts:update' %}" method = "POST">
+            {% csrf_token %}
+            <div class="update-size">
+                <label>이메일</label>
+                {{ form.email }}
+            
+                <label>성</label>
+                {{ form.first_name }}
+            
+                <label>이름</label>
+                {{ form.last_name }}
+            </div>
+            <input type="submit" value='회원정보 수정' class="btn btn-success fw-bold  mb-3" style="width:100%; padding:20px; font-size: 22px;"> 
+            <a class="change-password btn btn-success" style="width:100%; padding:20px; font-size: 22px;" on-click='func()' href="{% url 'accounts:change_password' %}">비밀번호 변경</a>
+        </form>
+    </div>
+    <div class='text-center'>
+    </div>
+{% endblock content %}
+
+
+
+
+
+
+
+{% comment %} {% block content %}
+<h1 class="text-center text-success fw-bold mb-5">Update</h1>
+<div class='d-flex justify-content-center'>
+    <form action="{% url 'accounts:update' %}" method = "POST">
+        {% csrf_token %}
+        <div class="update-size">
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value='회원정보 수정' class="btn btn-success fw-bold  mb-5" style=" padding:15px; font-size: 22px;"> 
+        </div>
+    </form>
+</div>
+{% endblock content %} {% endcomment %}

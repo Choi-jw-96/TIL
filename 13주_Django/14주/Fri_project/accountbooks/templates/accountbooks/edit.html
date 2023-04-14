@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'accountbooks:update' accountbook.pk %}" class="row" method="POST">
+  {% csrf_token %}
+  <div class="row mb-3">
+    <label for="inputNote" class="form-label">Note</label>
+    <input class="form-control" type="text" id="inputNote" name="note" value="{{accountbook.note}}"/>
+  </div>
+  <div class="row mb-3">
+    <label for="inputCategory" class="form-label">Category</label>
+    <select id="inputCategory" name="category">
+      <option selected>{{accountbook.category}}</option>
+      <option>생활비</option>
+      <option>교통비</option>
+      <option>식비</option>
+      <option>카트값</option>
+      <option>기타</option>
+    </select>
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="number"
+      class="form-control"
+      name="amount"
+      value="{{accountbook.amount}}"
+    />
+    <span class="input-group-text">KRW</span>
+  </div>
+  <div class="row mb-3">
+    <label for="inputDate" class="form-label">Date</label>
+    <input
+      class="form-control"
+      type="date"
+      id="inputDate"
+      name="date"
+      value="{{accountbook.date|date:"Y-m-d"}}"
+    />
+  </div>
+  <div class="row mb-3">
+    <label for="inputDescription" class="form-label">Description</label>
+    <textarea name="description" id="inputDescription" cols="30" rows="10"> 
+    {{accountbook.description}}</textarea>
+  </div>
+  <div class="col-12">
+    <input type="submit" class="btn btn-primary"></input>
+  </div>
+</form>
+{% endblock content %}

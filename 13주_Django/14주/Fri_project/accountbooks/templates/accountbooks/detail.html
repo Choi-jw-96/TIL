@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card" style="width: 18rem">
+  <div class="card-header">{{accountbook.note}}</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <span>메모</span> {{accountbook.description}}
+    </li>
+    <li class="list-group-item"><span>식비</span> {{accountbook.category}}</li>
+    <li class="list-group-item"><span>가격</span> {{accountbook.amount}}</li>
+    <li class="list-group-item"><span>날짜</span> {{accountbook.date}}</li>
+  </ul>
+</div>
+
+<form action=" {% url 'accountbooks:delete' accountbook.pk %}" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="삭제하기" />
+</form>
+
+<form action=" {% url 'accountbooks:copy' accountbook.pk %}" method="GET">
+  <input type="submit" value="복사하기" />
+</form>
+
+<a href="{% url 'accountbooks:edit' accountbook.pk %}"> 수정하기</a>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1> 게시글 작성 </h1>
+    <form action="{% url 'reviews:create' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="올리기">
+    </form>
+    <a href="{% url 'reviews:index' %}">home</a>
+</div>
+{% endblock content %}

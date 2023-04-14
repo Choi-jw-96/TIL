@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if posts %}
+
+  {% if posts.category == '개발' %}
+    {% for post in posts %}
+      <p class="fs-5">글 번호- <a href=" {% url 'posts:detail' post.pk %} ">{{ post.pk }}</a>
+      / 카테고리-{{ post.category }}</p>
+    {% endfor %}
+  {% elif posts.category == 'CS' %}
+    {% for post in posts %}
+      <p class="fs-5">글 번호- <a href=" {% url 'posts:detail' post.pk %} ">{{ post.pk }}</a>
+      / 카테고리-{{ post.category }}</p>
+    {% endfor %}
+  {% else %}
+    {% for post in posts %}
+      <p class="fs-5">글 번호- <a href=" {% url 'posts:detail' post.pk %} ">{{ post.pk }}</a>
+      / 카테고리-{{ post.category }}</p>
+    {% endfor %}
+  {% endif %}
+
+{% endif %}
+
+
+{% endblock content %}

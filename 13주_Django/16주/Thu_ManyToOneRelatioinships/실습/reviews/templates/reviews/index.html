@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>INDEX</h1>
+  <a href="{% url 'reviews:create' %}">글 쓰기</a>
+  
+  {% for review in reviews %}
+
+  {% if review.image %}
+    <img src="{{review.image.url}}" alt="img">
+    <p>제목 : <a href="{% url 'reviews:detail' review.pk %}">{{review.title}}</a></p>
+    <p>영화명 : {{review.movie}}</p> 
+    <hr>
+  {% endif %}
+
+  <p>제목 : <a href="{% url 'reviews:detail' review.pk %}">{{review.title}}</a></p>
+  <p>영화명 : {{review.movie}}</p> 
+  <hr>
+  {% endfor %}
+</div>
+{% endblock content %}

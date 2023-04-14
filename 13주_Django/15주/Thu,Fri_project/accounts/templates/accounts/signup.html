@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  <style>
+
+    p {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    p label {
+      white-space: nowrap;
+    }
+
+    p span {
+      grid-column: 1 / -1;
+    }
+
+  </style>
+{% endblock style %}
+
+{% block content %}
+<div>
+  <form action="{% url 'accounts:signup' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="회원가입" class="btn btn-light text-secondary d-block w-100 mb-3">
+    <a class="btn btn-light text-secondary d-block w-100" onclick='func()'  href="{% url 'posts:index' %}">Back</a>
+  </form>
+</div>
+{% endblock content %}

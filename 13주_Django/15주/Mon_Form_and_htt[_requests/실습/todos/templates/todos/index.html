@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Index</h1>
+<a href="{% url 'todos:create' %}">새로운 일정 생성</a>
+<h3>목록</h3>
+{% for todo in todos %}
+  <p>일정 : <a href="{% url 'todos:detail' todo.pk %}"> {{todo.title}} </a>  </p>
+  <p> 중요도 : {{todo.priority}} </p>
+  <p>마감 날짜 : {{todo.deadline}} </p>
+  <hr>
+{% endfor %}
+{% endblock content %}

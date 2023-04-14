@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>HOME</h1>
+  <h3>안녕하세요, {{user}}님!</h3>
+  {% if request.user.is_authenticated %}
+    {% comment %} 로그 아웃, 회원 정보수정, 탈퇴 {% endcomment %}
+    <form action="{% url 'accounts:logout' %}" method="logout">
+      <input type="submit" value="Logout">
+    </form>
+    <form action="{% url 'accounts:delete' %}">
+      <input type="submit" value="cancle membership">
+    </form>
+    <a href="{% url 'accounts:update' %}">Update</a>
+    <a href="{% url 'accounts:change_password' %}">비밀번호 수정</a>
+
+    <h4> {{user.username}} </h4>
+    <h4> {{user.email}} </h4>
+    <h4> {{user.first_name}} </h4>
+    <h4> {{user.last_name}} </h4>
+
+  {% else %}
+    <a href="{% url 'accounts:login' %}">Login</a>
+    <a href="{% url 'accounts:signup' %}">Singup</a>
+  {% endif %}
+{% endblock content %}

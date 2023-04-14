@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Detail</h1>
+  <p> 번호 : {{ article.pk }}</p>
+  <p> 제목 : {{ article.title }}</p>
+  <p> 내용 : {{ article.content }}</p>
+  <p> 작성일 : {{ article.created_at }}</p>
+  <p> 수정일 : {{ article.update_at }}</p>
+  <div>
+
+  {% comment %} <a href="{% url 'articles:delete' article.pk %}">삭제</a> 
+  a태그는 단순 이동에만 사용 수정이 있을경우는 form태그{% endcomment %}
+  <form action="{% url 'articles:delete' article.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+  </form>
+  <a href="{% url 'articles:edit' article.pk %}">[edit]</a>
+  <a href="{% url 'articles:index' %}">[돌아가기]</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<h1>welcome</h1>
+<h3>your accountbooks:</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">note</th>
+      <th scope="col">category</th>
+      <th scope="col">amount</th>
+      <th scope="col">detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for accountbook in accountbooks %}
+    <tr>
+      <th scope="row">{{accountbook.pk}}</th>
+      <td>{{ accountbook.note }}</td>
+      <td>{{ accountbook.category }}</td>
+      <td>{{ accountbook.amount }}</td>
+      <td>
+        <a href=" {% url 'accountbooks:detail' accountbook.pk %} "
+          >자세히 보기</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}

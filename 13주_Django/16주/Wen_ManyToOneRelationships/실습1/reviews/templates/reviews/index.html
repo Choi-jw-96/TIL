@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  {% if request.user.is_authenticated %}
+    <p>안녕하세요! {{ user }}님!</p>
+    <a href="{% url 'accounts:update' %}">Update</a>
+    <form action="{% url 'accounts:logout' %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Logout">
+    </form>
+    <form action="{% url 'accounts:delete' %}" method='POST'>
+      {% csrf_token %}
+      <input type="submit" value='탈퇴'>
+    </form>
+  {% else %}
+    <a href="{% url 'accounts:login' %}">Login</a>
+    <a href="{% url 'accounts:signup' %}">Signup</a>
+  {% endif %}
+</div>
+
+<h1>INDEX</h1>
+<a href="{% url 'reviews:create' %}">글 작성</a>
+<br>
+{% for review in reviews %}
+<a href="{% url 'reviews:detail' review.pk %}">{{review.title}}</a>
+{{review.movie}}
+{{review.user}}
+{% endfor %}
+{% endblock content %}

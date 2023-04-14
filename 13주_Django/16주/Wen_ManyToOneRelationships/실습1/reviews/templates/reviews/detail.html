@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Detail</h1>
+<p>영화 : {{ review.movie }}</p>
+<p>작성자 : {{ review.user }}</p>
+<p>제목 : {{ review.title }}</p>
+<p>{{ review.content }}</p>
+<a href="{% url 'reviews:index' %}">home</a>
+
+<h4>댓글 목록</h4>
+<form action="{% url 'reviews:comment_create' review.pk %}" method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="등록">
+</form>
+{% for comment in comments %}
+<div>
+  {{comment.pk}}
+  {{comment.user.username}}
+  {{comment.content}}
+</div>
+{% endfor %}
+{% endblock content %}

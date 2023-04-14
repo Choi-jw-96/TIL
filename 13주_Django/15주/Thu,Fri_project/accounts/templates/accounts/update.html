@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  <style>
+    div {
+      margin: auto;
+      width: 500px;
+    }
+
+    p {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    p span {
+      grid-column: 1 / -1;
+    }
+  </style>
+{% endblock style %}
+
+{% block content %}
+<div>
+  <form action="{% url 'accounts:update' %}" method="POST" class="m-5 mb-3">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="회원정보수정" class="btn btn-light text-secondary d-block w-100"> 
+  </form>
+  <form action="{% url 'accounts:id_delete' %}" method="POST" class="m-5 mt-0">
+    {% csrf_token %}
+    <input class="btn btn-light text-secondary d-block w-100 mb-3" type="submit" value="회원탈퇴">
+    <a class="btn btn-light text-secondary d-block w-100" onclick='func()'  href="{% url 'posts:index' %}">Back</a>
+  </form>
+
+</div>
+{% endblock content %}

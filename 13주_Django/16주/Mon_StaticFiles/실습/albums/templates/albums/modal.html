@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="modal hidden"> 						
+    <div class="modal_overlay">
+      <form action="{% url 'albums:modal'%}" method = "POST">
+        <input type="img">
+        <input type="text">
+      </form>
+    </div>  		
+    <div class="modal_content"> 
+        <button class="close_modal" onclick="saveModal()">save</button>
+        <button class="close_modal" onclick="closeModal()">close</button>
+    </div>
+  </div>
+</body>
+</html>

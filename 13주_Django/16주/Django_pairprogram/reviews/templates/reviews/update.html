@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h5 class="mt-5 d-flex justify-content-center" style="color:#198754">리뷰 수정하기</h5>
+    <div class="mt-5 container d-flex justify-content-center" style="width:70%">
+        <form action="{% url 'reviews:update' review.pk %}" method="POST"  enctype="multipart/form-data"> 
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="d-flex justify-content-center btn btn-success" type="submit" value="수정">
+        </form>
+    </div>
+{% endblock content %}

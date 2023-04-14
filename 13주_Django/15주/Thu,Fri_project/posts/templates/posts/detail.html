@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+  <p>글 번호 : {{ post.pk }} </p>
+  <p>글 제목 : {{ post.title }}</p>
+  <p>글 내용 : {{ post.content }} </p>
+  <p>글 카테고리 : {{ post.category }}</p>
+
+  <div class="d-flex">
+    <a class="btn btn-light text-secondary me-2" href="{% url 'posts:index' %}">Back</a>
+    <a href=" {% url 'posts:update' post.pk %}" class="btn btn-light text-secondary me-2">Edit</a>
+    <form action="{% url 'posts:delete' post.pk %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Delete" class="btn btn-light text-secondary">
+    </form>
+  </div>
+
+</div>
+
+
+{% endblock content %}
